@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <conio.h>
 
-void ordemI(int *n,int t);
+void ordemI(int *n,int t);      //funcao do Selection Sort
 void print(int *n,int t);       //funcao para escrevar a vetor no terminal 
 
 
@@ -19,19 +19,18 @@ void print(int *n,int t){
     for(int x=0;x<t;x++){
         printf("%d|",n[x]);
     }
-    getchar();
 }
 
 void ordemI(int *n,int t){
     int y,aux;
     for(int x=1;x<t;x++){
-        y=x;
+        y=x;                    //declarar o valor de comparação da variavel y
         while(n[y]<n[y-1]){
             aux=n[y];
             n[y]=n[y-1];
             n[y-1]=aux;
             print(n,t);
-            if(y-1>=1){
+            if(y-1>=1){         //reduz o valo para comparar as posição de traz do numero comparado
                 y-=1;
             }
         }
