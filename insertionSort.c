@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 
 void ordemI(int *n,int t);      //funcao do Selection Sort
 void print(int *n,int t);       //funcao para escrevar a vetor no terminal 
